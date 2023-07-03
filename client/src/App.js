@@ -32,6 +32,8 @@ const App = () => {
   // Sort by date
   const sortedTasks = tasks?.sort((a, b) => new Date(a.date)- new Date(b))
 
+  console.log(process.env.REACT_APP_SERVERURL);
+
   return (
     <div className="app">
       {!authToken && <Auth />}

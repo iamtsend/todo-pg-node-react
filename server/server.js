@@ -88,6 +88,7 @@ app.post('/signup', async (req, res) => {
 
 // login
 app.post('/login', async (req, res) => {
+  console.log(req.body);
   const { email, password } = req.body
   try {
     const users = await pool.query(`SELECT * FROM users WHERE email = $1`, [email])
